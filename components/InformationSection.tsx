@@ -14,13 +14,21 @@ export interface InformationSectionProps {
 }
 
 function renderItem(item: string) {
+  if (!item.includes("zde")) {
+    return item;
+  }
+
+  // Určit URL odkazu na základě obsahu
+  const isRegistration = item.includes("Přihláška");
+  const href = isRegistration ? "/registrace" : "/propozice";
+
   const parts = item.split("zde");
 
   return parts.map((part, index) => (
     <span key={index}>
       {part}
       {index < parts.length - 1 && (
-        <Link href="/propozice" className="text-blue-600 underline hover:text-blue-700">
+        <Link href={href} className="text-blue-600 underline hover:text-blue-700">
           zde
         </Link>
       )}
