@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export interface InformationSectionProps {
   title: string;
   paragraphs: string[];
@@ -9,6 +11,21 @@ export interface InformationSectionProps {
     title: string;
     items: string[];
   };
+}
+
+function renderItem(item: string) {
+  const parts = item.split("zde");
+
+  return parts.map((part, index) => (
+    <span key={index}>
+      {part}
+      {index < parts.length - 1 && (
+        <Link href="/propozice" className="text-blue-600 underline hover:text-blue-700">
+          zde
+        </Link>
+      )}
+    </span>
+  ));
 }
 
 export default function InformationSection({
@@ -34,7 +51,7 @@ export default function InformationSection({
           </h3>
           <ul className="mt-4 space-y-2 text-slate-700">
             {forTeams.items.map((item, index) => (
-              <li key={index}>• {item}</li>
+              <li key={index}>• {renderItem(item)}</li>
             ))}
           </ul>
         </div>
