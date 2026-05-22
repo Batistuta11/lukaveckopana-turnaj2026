@@ -36,13 +36,13 @@ export default function VitezovePage() {
                 </thead>
                 <tbody className="divide-y divide-slate-200">
                   {winners.map((winner) => {
-                    const isCurrentChampion = winner.year === 2025;
+                    const isLastKnownChampion = winner.year === 2024;
 
                     return (
                       <tr
                         key={`${winner.edition}-${winner.year}`}
                         className={
-                          isCurrentChampion ? "bg-blue-50" : "bg-white"
+                          isLastKnownChampion ? "bg-blue-50" : "bg-white"
                         }
                       >
                         <td className="whitespace-nowrap px-4 py-3 font-black text-slate-950">
@@ -55,9 +55,9 @@ export default function VitezovePage() {
                           <span className="font-black text-slate-950">
                             {winner.team}
                           </span>
-                          {isCurrentChampion && (
+                          {isLastKnownChampion && (
                             <span className="ml-3 inline-flex rounded-full bg-blue-700 px-3 py-1 text-xs font-black text-white">
-                              aktuální obhájce
+                              poslední uvedený vítěz
                             </span>
                           )}
                         </td>
