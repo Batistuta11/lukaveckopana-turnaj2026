@@ -1,0 +1,61 @@
+{
+  "title": "25. ročník turnaje O pohár obce Lukavec",
+  "subtitle": "Tradiční turnaj v malé kopané v Lukavci",
+  "club": "Klub malé kopané Lukavec",
+  "clubShort": "KMKL",
+  "mainWebUrl": "https://www.lukaveckopana.cz",
+  "newsUrl": "https://www.lukaveckopana.cz/aktuality/",
+  
+  "hero": {
+    "label": "Klub malé kopané Lukavec",
+    "title": "25. ročník turnaje O pohár obce Lukavec",
+    "description": "Tradiční turnaj v malé kopané v Lukavci. Přehled termínu, propozic, počtu mužstev, programu a důležitých informací pro týmy i návštěvníky.",
+    "gifPath": "/gif/lukavecky-turnaj-2026.gif"
+  },
+
+  "infoCards": [
+    {
+      "label": "Termín",
+      "value": "1. - 3. srpna 2026",
+      "note": "zahájení od 8:00"
+    },
+    {
+      "label": "Místo",
+      "value": "Hřiště Lukavec",
+      "note": "sportovní areál v Lukavci u Hořic"
+    },
+    {
+      "label": "Stav",
+      "value": "Připravujeme",
+      "note": "propozice budou postupně doplněny"
+    }
+  ],
+
+  "information": {
+    "title": "Informace k turnaji",
+    "paragraphs": [
+      "Klub malé kopané Lukavec připravuje jubilejní 25. ročník tradičního turnaje v malé kopané O pohár obce Lukavec.",
+      "Na této stránce budou postupně doplněny informace o počtu mužstev, systému turnaje, startovném, harmonogramu, občerstvení a organizačních pokynech.",
+      "Stránka běží samostatně na Vercelu. Hlavní web KMKL zůstává na WordPressu u FORPSI a z aktuality bude na tuto stránku pouze odkaz."
+    ]
+  },
+
+  "sections": {
+    "forTeams": {
+      "title": "Pro mužstva",
+      "items": [
+        "informace k přihláškám budou doplněny",
+        "počet týmů bude upřesněn",
+        "pravidla a systém turnaje budou zveřejněny zde"
+      ]
+    },
+    "forVisitors": {
+      "title": "Pro návštěvníky",
+      "items": [
+        "sportovní program po celý den",
+        "občerstvení v areálu",
+        "příjemná atmosféra v Lukavci"
+      ]
+    }
+  }
+}
