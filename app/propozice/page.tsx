@@ -45,6 +45,40 @@ export default function PropozicePage() {
               </a>
             </div>
 
+            <div className="rounded-3xl bg-slate-50 p-6">
+              <h2 className="text-2xl font-black text-slate-950">Kontakty pořadatelů</h2>
+              <div className="mt-4 space-y-4 text-slate-700">
+                {tournamentData.proposals.organizers.map((organizer) => (
+                  <div
+                    key={organizer.name}
+                    className="rounded-3xl bg-white p-5 shadow-sm"
+                  >
+                    <p className="font-black text-slate-950">
+                      {organizer.name}, {organizer.location}
+                    </p>
+                    <p>
+                      mobil: <a className="text-blue-600 underline" href={`tel:${organizer.mobile.replace(/\s+/g, "")}`}>
+                        {organizer.mobile}
+                      </a>
+                    </p>
+                    <p>
+                      e-mail: <a className="text-blue-600 underline" href={`mailto:${organizer.email}`}>
+                        {organizer.email}
+                      </a>
+                    </p>
+                    <p>
+                      www: <a className="text-blue-600 underline" href={organizer.website}>
+                        {organizer.website}
+                      </a>
+                    </p>
+                  </div>
+                ))}
+                <p className="text-sm text-slate-600">
+                  {tournamentData.proposals.organizersFooter}
+                </p>
+              </div>
+            </div>
+
             <div className="space-y-4">
               <p>
                 Pokud budeš mít dotazy k propozicím, napiš na oficiální stránky hlavního webu KMKL

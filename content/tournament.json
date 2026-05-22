@@ -95,7 +95,24 @@
         "url": "/downloads/propozice_2026novyhsok.doc",
         "type": "Word"
       }
-    ]
+    ],
+    "organizers": [
+      {
+        "name": "Honza Bartoš",
+        "location": "Lukavec u Hořic",
+        "mobile": "724 460 412",
+        "email": "jan.bartos@cdt.cz",
+        "website": "http://www.lukaveckopana.cz"
+      },
+      {
+        "name": "Honza Šotola",
+        "location": "Lukavec u Hořic",
+        "mobile": "608 930 890",
+        "email": "honzasotek@seznam.cz",
+        "website": "http://www.lukaveckopana.cz"
+      }
+    ],
+    "organizersFooter": "Za pořadatele turnaje Lukavec 2026: Honza Bartoš, Honza Šotola, Jarda Janoušek"
   }
 }
 
