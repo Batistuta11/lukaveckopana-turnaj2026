@@ -45,6 +45,15 @@ export default function ProposalsSection({
           </a>
         ))}
       </div>
+
+      <div className="mt-8">
+        <a
+          href="/propozice"
+          className="inline-flex rounded-full bg-slate-900 px-6 py-3 text-sm font-black text-white hover:bg-slate-800"
+        >
+          Zobrazit propozice
+        </a>
+      </div>
     </section>
   );
 }
