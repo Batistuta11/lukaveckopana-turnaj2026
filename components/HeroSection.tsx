@@ -30,7 +30,7 @@ export default function HeroSection({
           <img
             src={gifPath}
             alt="Turnaj GIF"
-            className="mb-6 w-full rounded-lg hidden md:block"
+            className="mb-6 w-full rounded-lg"
           />
         )}
         <p className="mb-3 text-sm font-black uppercase tracking-[0.3em] text-blue-300">
