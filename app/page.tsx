@@ -1,4 +1,5 @@
 import BackButton from "@/components/BackButton";
+import DefendingChampionSection from "@/components/DefendingChampionSection";
 import HeroSection from "@/components/HeroSection";
 import InfoCardsSection from "@/components/InfoCardsSection";
 import InformationSection from "@/components/InformationSection";
@@ -22,6 +23,10 @@ export default function HomePage() {
         />
 
         <InfoCardsSection cards={tournamentData.infoCards} />
+
+        <DefendingChampionSection
+          champion={tournamentData.defendingChampion}
+        />
 
         <InformationSection
           title={tournamentData.information.title}

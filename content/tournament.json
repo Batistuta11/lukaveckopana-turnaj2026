@@ -33,6 +33,15 @@
     }
   ],
 
+  "defendingChampion": {
+    "eyebrow": "Vítěz minulého ročníku",
+    "teamName": "E-Fyzio",
+    "title": "Přijede si E-Fyzio pro třetí vítězství v řadě?",
+    "description": "Obhájce prvenství může v jubilejním 25. ročníku zaútočit na třetí triumf za sebou a odvézt si putovní pohár natrvalo.",
+    "badges": ["Vítěz 2025", "2 vítězství v řadě", "Putovní pohár ve hře"],
+    "imagePath": "/images/E-Fyzio.jpg"
+  },
+
   "information": {
     "title": "Informace k turnaji",
     "paragraphs": [
