@@ -57,5 +57,17 @@
         "příjemná atmosféra v Lukavci"
       ]
     }
+  },
+
+  "proposals": {
+    "title": "Propozice turnaje",
+    "description": "Stáhni si podrobné propozice turnaje s informacemi o pravidlech, startovném a organizačních podmínkách.",
+    "files": [
+      {
+        "name": "Propozice 2026",
+        "url": "/downloads/propozice_2026novyhsok.doc",
+        "type": "Word"
+      }
+    ]
   }
 }

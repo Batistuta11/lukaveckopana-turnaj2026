@@ -2,6 +2,7 @@ import BackButton from "@/components/BackButton";
 import HeroSection from "@/components/HeroSection";
 import InfoCardsSection from "@/components/InfoCardsSection";
 import InformationSection from "@/components/InformationSection";
+import ProposalsSection from "@/components/ProposalsSection";
 import ActionButtons from "@/components/ActionButtons";
 import tournamentData from "@/content/tournament.json";
 
@@ -25,6 +26,12 @@ export default function HomePage() {
           paragraphs={tournamentData.information.paragraphs}
           forTeams={tournamentData.sections.forTeams}
           forVisitors={tournamentData.sections.forVisitors}
+        />
+
+        <ProposalsSection
+          title={tournamentData.proposals.title}
+          description={tournamentData.proposals.description}
+          files={tournamentData.proposals.files}
         />
 
         <ActionButtons
