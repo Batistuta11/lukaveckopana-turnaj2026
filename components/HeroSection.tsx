@@ -4,6 +4,7 @@ export interface HeroSectionProps {
   description: string;
   gifPath?: string;
   imagePath?: string;
+  logoPath?: string;
 }
 
 export default function HeroSection({
@@ -12,6 +13,7 @@ export default function HeroSection({
   description,
   gifPath,
   imagePath,
+  logoPath,
 }: HeroSectionProps) {
   return (
     <header className="relative overflow-hidden rounded-[2rem] bg-slate-950 text-white shadow-xl">
@@ -33,9 +35,18 @@ export default function HeroSection({
             className="mb-6 w-full rounded-lg"
           />
         )}
-        <p className="mb-3 text-sm font-black uppercase tracking-[0.3em] text-blue-300">
-          {label}
-        </p>
+        <div className="mb-5 flex items-center gap-4">
+          {logoPath && (
+            <img
+              src={logoPath}
+              alt="Znak Klubu malé kopané Lukavec"
+              className="h-16 w-16 rounded-full border-2 border-white/80 bg-white object-cover shadow-lg md:h-20 md:w-20"
+            />
+          )}
+          <p className="text-sm font-black uppercase tracking-[0.3em] text-blue-300">
+            {label}
+          </p>
+        </div>
 
         <h1 className="max-w-4xl text-4xl font-black leading-tight md:text-6xl">
           {title}
