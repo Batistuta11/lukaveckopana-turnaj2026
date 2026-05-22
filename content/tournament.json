@@ -51,7 +51,7 @@
       "description": "Podívej se, kdo od roku 2002 zvedal nad hlavu pohár obce Lukavec.",
       "buttonLabel": "Zobrazit vítěze",
       "href": "/vitezove",
-      "imagePath": "/images/201102051718_znakKMKL2.jpg"
+      "imagePath": "/images/prvni-vitez-2002.png"
     },
     "items": [
       { "edition": 1, "year": 2002, "team": "Výpůdek" },
