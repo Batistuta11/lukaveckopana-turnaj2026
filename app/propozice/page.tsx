@@ -1,5 +1,21 @@
+import type { Metadata } from "next";
 import BackButton from "@/components/BackButton";
 import tournamentData from "@/content/tournament.json";
+
+export const metadata: Metadata = {
+  title: "Propozice turnaje",
+  description:
+    "Propozice 25. ročníku turnaje O pohár obce Lukavec: pravidla, systém, startovné, harmonogram a kontakty pořadatelů.",
+  alternates: {
+    canonical: "/propozice",
+  },
+  openGraph: {
+    title: "Propozice turnaje Lukavec 2026",
+    description:
+      "Pravidla, systém turnaje, startovné, harmonogram a kontakty k turnaji O pohár obce Lukavec.",
+    url: "/propozice",
+  },
+};
 
 export default function PropozicePage() {
   return (

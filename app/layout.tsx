@@ -13,9 +13,40 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "25. ročník turnaje O pohár obce Lukavec",
+  metadataBase: new URL("https://turnaj2026.lukaveckopana.cz"),
+  title: {
+    default: "25. ročník turnaje O pohár obce Lukavec",
+    template: "%s | Turnaj Lukavec 2026",
+  },
   description:
-    "Informace k 25. ročníku turnaje v malé kopané O pohár obce Lukavec v Lukavci.",
+    "Informace k 25. ročníku turnaje v malé kopané O pohár obce Lukavec. Termín, propozice, registrace mužstev a historie vítězů.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "cs_CZ",
+    url: "/",
+    siteName: "Turnaj Lukavec 2026",
+    title: "25. ročník turnaje O pohár obce Lukavec",
+    description:
+      "Samostatná prezentační stránka jubilejního turnaje v malé kopané v Lukavci.",
+    images: [
+      {
+        url: "/images/lukavec2026.webp",
+        width: 1200,
+        height: 630,
+        alt: "25. ročník turnaje O pohár obce Lukavec",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "25. ročník turnaje O pohár obce Lukavec",
+    description:
+      "Termín, propozice, registrace mužstev a historie vítězů turnaje v Lukavci.",
+    images: ["/images/lukavec2026.webp"],
+  },
 };
 
 export default function RootLayout({

@@ -1,6 +1,22 @@
+import type { Metadata } from "next";
 import BackButton from "@/components/BackButton";
 import RegistrationForm from "@/components/RegistrationForm";
 import tournamentData from "@/content/tournament.json";
+
+export const metadata: Metadata = {
+  title: "Přihláška mužstva",
+  description:
+    "Přihláška mužstva na 25. ročník turnaje O pohár obce Lukavec v malé kopané.",
+  alternates: {
+    canonical: "/registrace",
+  },
+  openGraph: {
+    title: "Přihláška mužstva na turnaj Lukavec 2026",
+    description:
+      "Online přihláška mužstva na jubilejní 25. ročník turnaje v malé kopané v Lukavci.",
+    url: "/registrace",
+  },
+};
 
 export default function RegistrationPage() {
   return (

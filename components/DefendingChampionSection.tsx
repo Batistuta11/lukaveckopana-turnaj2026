@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export interface DefendingChampionData {
   eyebrow: string;
   teamName: string;
@@ -53,10 +55,12 @@ export default function DefendingChampionSection({
 
         {champion.imagePath && (
           <div className="relative min-h-56 md:min-h-full">
-            <img
+            <Image
               src={champion.imagePath}
               alt={`Tým ${champion.teamName}, vítěz minulého ročníku`}
-              className="absolute inset-0 h-full w-full object-cover"
+              fill
+              sizes="(max-width: 768px) 100vw, 288px"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent md:bg-none" />
           </div>

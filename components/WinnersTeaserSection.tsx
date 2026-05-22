@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export interface WinnersTeaserData {
   eyebrow: string;
@@ -21,10 +22,12 @@ export default function WinnersTeaserSection({
       <div className="grid md:grid-cols-[15rem_1fr]">
         <div className="relative min-h-48 bg-slate-900">
           {teaser.imagePath && (
-            <img
+            <Image
               src={teaser.imagePath}
               alt="Historie vítězů turnaje"
-              className="absolute inset-0 h-full w-full object-cover"
+              fill
+              sizes="(max-width: 768px) 100vw, 240px"
+              className="object-cover"
             />
           )}
         </div>

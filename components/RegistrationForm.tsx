@@ -50,7 +50,7 @@ export default function RegistrationForm() {
         email: "",
         phone: "",
       });
-    } catch (err) {
+    } catch {
       setError("Chyba při odesílání. Zkus to později.");
     } finally {
       setLoading(false);

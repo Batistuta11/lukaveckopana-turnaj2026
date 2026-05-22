@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export interface HeroSectionProps {
   label: string;
   title: string;
@@ -19,9 +21,13 @@ export default function HeroSection({
     <header className="relative overflow-hidden rounded-[2rem] bg-slate-950 text-white shadow-xl">
       {imagePath && (
         <div className="absolute inset-0">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${imagePath})` }}
+          <Image
+            src={imagePath}
+            alt=""
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 1152px"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>
@@ -29,17 +35,23 @@ export default function HeroSection({
 
       <div className="relative px-6 py-12 md:px-12 md:py-16">
         {gifPath && (
-          <img
+          <Image
             src={gifPath}
             alt="Turnaj GIF"
+            width={1200}
+            height={400}
+            priority
+            unoptimized
             className="mb-6 w-full rounded-lg"
           />
         )}
         <div className="mb-5 flex items-center gap-4">
           {logoPath && (
-            <img
+            <Image
               src={logoPath}
               alt="Znak Klubu malé kopané Lukavec"
+              width={80}
+              height={80}
               className="h-16 w-16 rounded-full border-2 border-white/80 bg-white object-cover shadow-lg md:h-20 md:w-20"
             />
           )}
@@ -56,8 +68,6 @@ export default function HeroSection({
           {description}
         </p>
       </div>
-
-      
     </header>
   );
 }

@@ -1,5 +1,21 @@
+import type { Metadata } from "next";
 import BackButton from "@/components/BackButton";
 import tournamentData from "@/content/tournament.json";
+
+export const metadata: Metadata = {
+  title: "Vítězové turnaje",
+  description:
+    "Přehled vítězů turnaje O pohár obce Lukavec od prvního ročníku v roce 2002 po současnost.",
+  alternates: {
+    canonical: "/vitezove",
+  },
+  openGraph: {
+    title: "Vítězové turnaje O pohár obce Lukavec",
+    description:
+      "Historie vítězů jednotlivých ročníků tradičního turnaje v malé kopané v Lukavci.",
+    url: "/vitezove",
+  },
+};
 
 export default function VitezovePage() {
   const winners = [...tournamentData.winners.items].sort(
