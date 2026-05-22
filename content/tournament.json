@@ -42,6 +42,45 @@
     "imagePath": "/images/E-Fyzio.jpg"
   },
 
+  "winners": {
+    "title": "Vítězové turnaje O pohár obce Lukavec",
+    "description": "Přehled vítězů jednotlivých ročníků od prvního turnaje až po rok 2025.",
+    "teaser": {
+      "eyebrow": "Historie turnaje",
+      "title": "Vítězové turnaje",
+      "description": "Podívej se, kdo od roku 2002 zvedal nad hlavu pohár obce Lukavec.",
+      "buttonLabel": "Zobrazit vítěze",
+      "href": "/vitezove",
+      "imagePath": "/images/201102051718_znakKMKL2.jpg"
+    },
+    "items": [
+      { "edition": 1, "year": 2002, "team": "Výpůdek" },
+      { "edition": 2, "year": 2003, "team": "Ráchod" },
+      { "edition": 3, "year": 2004, "team": "Valdar" },
+      { "edition": 4, "year": 2005, "team": "Mošnovice" },
+      { "edition": 5, "year": 2006, "team": "Mažnovice" },
+      { "edition": 6, "year": 2007, "team": "Mošnovice" },
+      { "edition": 7, "year": 2008, "team": "Schlawec" },
+      { "edition": 8, "year": 2009, "team": "Mžany" },
+      { "edition": 9, "year": 2010, "team": "HLUCHÝ LUKAVEC" },
+      { "edition": 10, "year": 2011, "team": "Broumov" },
+      { "edition": 11, "year": 2012, "team": "HÝVOYÁři Hořice" },
+      { "edition": 12, "year": 2013, "team": "Smržov" },
+      { "edition": 13, "year": 2014, "team": "ZD Dubenec A" },
+      { "edition": 14, "year": 2015, "team": "ZD Dubenec A" },
+      { "edition": 15, "year": 2016, "team": "ZD Dubenec A" },
+      { "edition": 16, "year": 2017, "team": "Chlomek" },
+      { "edition": 17, "year": 2018, "team": "Chlomek" },
+      { "edition": 18, "year": 2019, "team": "Dolní Kalná" },
+      { "edition": 19, "year": 2020, "team": "Dolní Kalná" },
+      { "edition": 20, "year": 2021, "team": "Chlomek" },
+      { "edition": 21, "year": 2022, "team": "TJ Sokol Železnice" },
+      { "edition": 22, "year": 2023, "team": "Lomnice" },
+      { "edition": 23, "year": 2024, "team": "E-Fyzio Team" },
+      { "edition": 24, "year": 2025, "team": "E-Fyzio" }
+    ]
+  },
+
   "information": {
     "title": "Informace k turnaji",
     "paragraphs": [

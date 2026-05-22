@@ -5,6 +5,7 @@ import InfoCardsSection from "@/components/InfoCardsSection";
 import InformationSection from "@/components/InformationSection";
 import ProposalsSection from "@/components/ProposalsSection";
 import ActionButtons from "@/components/ActionButtons";
+import WinnersTeaserSection from "@/components/WinnersTeaserSection";
 import tournamentData from "@/content/tournament.json";
 
 export default function HomePage() {
@@ -27,6 +28,8 @@ export default function HomePage() {
         <DefendingChampionSection
           champion={tournamentData.defendingChampion}
         />
+
+        <WinnersTeaserSection teaser={tournamentData.winners.teaser} />
 
         <InformationSection
           title={tournamentData.information.title}
