@@ -38,10 +38,11 @@ Přihláška byla odeslána z webu turnaje.
 
     // Odeslání emailu
     const response = await resend.emails.send({
-      from: "turnaj@lukaveckopana.cz",
-      to: ["jan.bartos11@gmail.com", "jan.bartos@cdt.cz"],
+      from: "Klub malé kopané Lukavec <onboarding@resend.dev>",
+      to: ["jan.bartos11@gmail.com"],
       subject: `Nová přihláška: ${teamName}`,
       text: emailContent,
+      replyTo: email,
     });
 
     if (response.error) {
