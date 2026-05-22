@@ -21,30 +21,39 @@ export default function PropozicePage() {
             startovnému, systému, časovému harmonogramu a dalším organizačním pokynům.
           </p>
 
-          <div className="mt-8 rounded-3xl bg-slate-50 p-6">
-            <h2 className="text-2xl font-black text-slate-950">Stáhnout propozice</h2>
-            <p className="mt-2 text-slate-700">
-              Dokument propozic je k dispozici ke stažení ve formátu Word. Pokud potřebuješ
-              okamžitě stáhnout propozice, použij níže uvedený odkaz.
-            </p>
+          <div className="mt-8 space-y-10 text-slate-700">
+            {tournamentData.proposals.sections.map((section) => (
+              <div key={section.title} className="rounded-3xl bg-slate-50 p-6">
+                <h2 className="text-2xl font-black text-slate-950">{section.title}</h2>
+                <p className="mt-2 leading-8 text-slate-700">{section.content}</p>
+              </div>
+            ))}
 
-            <a
-              href={tournamentData.proposals.files[0].url}
-              download
-              className="mt-6 inline-flex rounded-full bg-blue-700 px-6 py-3 text-sm font-black text-white hover:bg-blue-800"
-            >
-              Stáhnout propozice
-            </a>
-          </div>
+            <div className="rounded-3xl bg-slate-50 p-6">
+              <h2 className="text-2xl font-black text-slate-950">Stáhnout propozice</h2>
+              <p className="mt-2 text-slate-700">
+                Dokument propozic je k dispozici ke stažení ve formátu Word. Pokud potřebuješ
+                mít propozice v offline režimu, použij níže uvedený odkaz.
+              </p>
 
-          <div className="mt-8 space-y-4 text-slate-700">
-            <p>
-              Pokud budeš mít dotazy k propozicím, napiš na oficiální stránky hlavního webu KMKL
-              nebo využij kontaktní informace uvedené v dokumentu.
-            </p>
-            <p>
-              Pro další informace se vrátíš zpět na hlavní stránku kliknutím na tlačítko nahoře.
-            </p>
+              <a
+                href={tournamentData.proposals.files[0].url}
+                download
+                className="mt-6 inline-flex rounded-full bg-blue-700 px-6 py-3 text-sm font-black text-white hover:bg-blue-800"
+              >
+                Stáhnout propozice
+              </a>
+            </div>
+
+            <div className="space-y-4">
+              <p>
+                Pokud budeš mít dotazy k propozicím, napiš na oficiální stránky hlavního webu KMKL
+                nebo využij kontaktní informace uvedené v dokumentu.
+              </p>
+              <p>
+                Pro další informace se vrátíš zpět na hlavní stránku kliknutím na tlačítko nahoře.
+              </p>
+            </div>
           </div>
         </div>
       </section>

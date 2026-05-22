@@ -63,6 +63,32 @@
   "proposals": {
     "title": "Propozice turnaje",
     "description": "Stáhni si podrobné propozice turnaje s informacemi o pravidlech, startovném a organizačních podmínkách.",
+    "sections": [
+      {
+        "title": "Termín a začátek",
+        "content": "25. ročník turnaje O pohár obce Lukavec se koná 1. 8. 2026. Zahájení je plánováno na 8:00 a turnaj bude ukončen v odpoledních hodinách podle průběhu zápasů."
+      },
+      {
+        "title": "Místo konání",
+        "content": "Turnaj se hraje na hřišti v Lukavci u Hořic ve sportovním areálu obce Lukavec. Hrací plochy jsou připraveny pro malé kopané s kvalitním povrchem a zázemím pro týmy i diváky."
+      },
+      {
+        "title": "Účastníci",
+        "content": "Turnaj je určen pro maximálně 10 mužstev. V případě většího zájmu bude pořadatel upřednostňovat týmy, které potvrdí účast nejdříve. Každé mužstvo může přihlásit hráče v souladu s pravidly dané soutěže."
+      },
+      {
+        "title": "Systém turnaje",
+        "content": "Turnaj bude probíhat formou skupinové fáze následované vyřazovací částí. Podrobné rozpisy skupin, hrací formát a délky zápasů budou zveřejněny před zahájením turnaje."
+      },
+      {
+        "title": "Pravidla",
+        "content": "Hraje se podle pravidel malé kopané, která jsou upravena pro potřeby turnaje. Hráči musí dodržovat fair play, bezpečnostní pravidla a pokyny rozhodčích."
+      },
+      {
+        "title": "Startovné a registrace",
+        "content": "Startovné je uvedeno v oficiálních propozicích, které jsou k dispozici ke stažení níže. Registrace se řídí pokyny pořadatele a do turnaje jsou zařazena mužstva, která splní přihlášku a zaplatí startovné."
+      }
+    ],
     "files": [
       {
         "name": "Propozice 2026",
@@ -72,3 +98,4 @@
     ]
   }
 }
+
