@@ -17,6 +17,7 @@ export default function HomePage() {
           title={tournamentData.hero.title}
           description={tournamentData.hero.description}
           gifPath={tournamentData.hero.gifPath}
+          imagePath={tournamentData.hero.imagePath}
         />
 
         <InfoCardsSection cards={tournamentData.infoCards} />
