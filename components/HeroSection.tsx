@@ -25,15 +25,14 @@ export default function HeroSection({
         </div>
       )}
 
-      {gifPath && (
-        <img
-          src={gifPath}
-          alt="Turnaj GIF"
-          className="gif-overlay pointer-events-none hidden md:block"
-        />
-      )}
-
       <div className="relative px-6 py-12 md:px-12 md:py-16">
+        {gifPath && (
+          <img
+            src={gifPath}
+            alt="Turnaj GIF"
+            className="mb-6 w-full rounded-lg hidden md:block"
+          />
+        )}
         <p className="mb-3 text-sm font-black uppercase tracking-[0.3em] text-blue-300">
           {label}
         </p>
