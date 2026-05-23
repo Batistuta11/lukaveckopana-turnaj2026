@@ -1,4 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
+
+interface HeroAction {
+  label: string;
+  href: string;
+}
 
 export interface HeroSectionProps {
   label: string;
@@ -7,6 +13,8 @@ export interface HeroSectionProps {
   gifPath?: string;
   imagePath?: string;
   logoPath?: string;
+  primaryAction?: HeroAction;
+  secondaryAction?: HeroAction;
 }
 
 export default function HeroSection({
@@ -16,6 +24,8 @@ export default function HeroSection({
   gifPath,
   imagePath,
   logoPath,
+  primaryAction,
+  secondaryAction,
 }: HeroSectionProps) {
   return (
     <header className="relative overflow-hidden rounded-[2rem] bg-slate-950 text-white shadow-xl">
@@ -67,6 +77,28 @@ export default function HeroSection({
         <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
           {description}
         </p>
+
+        {(primaryAction || secondaryAction) && (
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            {primaryAction && (
+              <Link
+                href={primaryAction.href}
+                className="inline-flex justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-black text-white shadow-lg shadow-blue-950/30 transition hover:bg-blue-500"
+              >
+                {primaryAction.label}
+              </Link>
+            )}
+
+            {secondaryAction && (
+              <Link
+                href={secondaryAction.href}
+                className="inline-flex justify-center rounded-full bg-white/95 px-6 py-3 text-sm font-black text-slate-950 transition hover:bg-white"
+              >
+                {secondaryAction.label}
+              </Link>
+            )}
+          </div>
+        )}
       </div>
     </header>
   );

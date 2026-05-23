@@ -12,7 +12,15 @@
     "description": "Tradiční turnaj v malé kopané v Lukavci. Přehled termínu, propozic, počtu mužstev, programu a důležitých informací pro týmy i návštěvníky.",
     "gifPath": "/gif/lukavecky-turnaj-2026.gif",
     "imagePath": "/images/lukavec2026.webp",
-    "logoPath": "/images/201102051718_znakKMKL2.jpg"
+    "logoPath": "/images/201102051718_znakKMKL2.jpg",
+    "primaryAction": {
+      "label": "Přihlásit mužstvo",
+      "href": "/registrace"
+    },
+    "secondaryAction": {
+      "label": "Zobrazit propozice",
+      "href": "/propozice"
+    }
   },
 
   "infoCards": [
