@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <title>TODO - turnaj Lukavec 2026</title>
+  <style>
+    @page {
+      margin: 18mm;
+    }
+
+    body {
+      color: #111827;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11pt;
+      line-height: 1.45;
+    }
+
+    h1 {
+      border-bottom: 3px solid #1d4ed8;
+      color: #0f172a;
+      font-size: 24pt;
+      margin: 0 0 8mm;
+      padding-bottom: 4mm;
+    }
+
+    h2 {
+      color: #1d4ed8;
+      font-size: 15pt;
+      margin: 9mm 0 3mm;
+      page-break-after: avoid;
+    }
+
+    p {
+      margin: 0 0 4mm;
+    }
+
+    ul {
+      margin: 0 0 2mm;
+      padding-left: 0;
+    }
+
+    li {
+      list-style: none;
+      margin: 0 0 2.2mm;
+      padding-left: 7mm;
+      position: relative;
+    }
+
+    li::before {
+      border: 1.5px solid #334155;
+      content: "";
+      height: 3.6mm;
+      left: 0;
+      position: absolute;
+      top: 0.8mm;
+      width: 3.6mm;
+    }
+
+    li.done::before {
+      background: #1d4ed8;
+      border-color: #1d4ed8;
+      color: white;
+      content: "✓";
+      font-size: 9pt;
+      font-weight: 700;
+      line-height: 3.6mm;
+      text-align: center;
+    }
+
+    code {
+      background: #f1f5f9;
+      border-radius: 3px;
+      color: #0f172a;
+      font-family: "Courier New", monospace;
+      font-size: 10pt;
+      padding: 1px 4px;
+    }
+
+    .meta {
+      color: #475569;
+      font-weight: 700;
+      margin-bottom: 5mm;
+    }
+
+    .intro {
+      background: #eff6ff;
+      border-left: 4px solid #1d4ed8;
+      margin-bottom: 7mm;
+      padding: 4mm;
+    }
+  </style>
+</head>
+<body>
+  <h1>TODO - turnaj Lukavec 2026</h1>
+  <p class="meta">Stav k: 24. 5. 2026</p>
+  <p class="intro">Tento dokument slouzi jako pracovni checklist pro web 25. rocniku turnaje O pohar obce Lukavec. Prubezne odskrtavej body v souboru <code>docs/TODO.md</code> a podle potreby z nej znovu vygeneruj PDF.</p>
+
+  <h2>Hotovo</h2>
+  <ul>
+    <li class="done">Projekt bezi na Next.js App Routeru, TypeScriptu a Tailwind CSS.</li>
+    <li class="done">Hlavni stranka je slozena z komponent a <code>app/page.tsx</code> zustava kratky.</li>
+    <li class="done">Hlavni editovatelna data jsou v <code>content/tournament.json</code>.</li>
+    <li class="done">Web ma hlavni sekce: hero, info karty, obhajce titulu, historie vitezu, informace pro tymy/navstevniky a propozice.</li>
+    <li class="done">Existuje stranka <code>/registrace</code> s prihlasovacim formularem.</li>
+    <li class="done">Existuje stranka <code>/propozice</code> s textem propozic, kontakty a odkazy ke stazeni.</li>
+    <li class="done">Existuje stranka <code>/vitezove</code> s prehledem vitezu od roku 2002 do roku 2025.</li>
+    <li class="done">Je doplnen vitez roku 2025: E-FYZIO MILETIN.</li>
+    <li class="done">Hero obsahuje akce <code>Prihlasit muzstvo</code> a <code>Zobrazit propozice</code>.</li>
+    <li class="done">SEO metadata jsou nastavena pro hlavni stranku, registraci, propozice a viteze.</li>
+    <li class="done">Build projektu aktualne prochazi prikazem <code>npm run build</code>.</li>
+  </ul>
+
+  <h2>Priorita 1 - dokoncit pred nasazenim</h2>
+  <ul>
+    <li>Rozhodnout, jestli jsou aktualni necommitnute zmeny finalni, hlavne registrace, propozice a odkazy v informacni sekci.</li>
+    <li>Zkontrolovat, jestli soubor <code>public/downloads/propozice_2026novyhsok.pdf</code> je finalni verze propozic.</li>
+    <li>Rozhodnout, jestli ponechat na webu oba soubory propozic: PDF i Word.</li>
+    <li>Opravit nebo potvrdit nazev souboru <code>propozice_2026novyhsok.*</code>; pokud ma byt verejny, zvazit citelnejsi nazev bez preklepu.</li>
+    <li>Projit vsechny texty v <code>content/tournament.json</code> a nahradit obecne formulace typu <code>budou doplneny</code> finalnimi informacemi, pokud uz jsou znama pravidla, startovne a system turnaje.</li>
+    <li>Overit produkcni odesilani prihlasovaciho formulare pres Resend.</li>
+    <li>Overit, ze domena odesilatele <code>turnaj@lukaveckopana.cz</code> je v Resendu spravne nastavena a doruceni nekonci ve spamu.</li>
+    <li>Ujasnit prijemce prihlasovacich emailu v <code>app/api/register/route.ts</code>.</li>
+    <li>Rozhodnout, jestli se maji commitovat <code>.codex/</code> a <code>.npmrc</code>; pravdepodobne je lepsi je necommitovat, pokud nejsou zamerne projektove.</li>
+    <li>Pred commitem znovu spustit <code>npm run build</code>.</li>
+  </ul>
+
+  <h2>Priorita 2 - obsah a provoz</h2>
+  <ul>
+    <li>Doplnit finalni startovne, pokud ma byt viditelne primo na webu.</li>
+    <li>Doplnit finalni hraci system, delku zapasu a format skupin/vyrazovaci casti.</li>
+    <li>Doplnit finalni casovy harmonogram dne, pokud bude znamy pred turnajem.</li>
+    <li>Doplnit informaci o kapacite tymu a pripadne stav obsazenosti.</li>
+    <li>Rozhodnout, jestli na webu zobrazovat seznam prihlasenych tymu.</li>
+    <li>Zkontrolovat kontakty poradatelu: telefon, email a jednotny odkaz na hlavni web <code>https://www.lukaveckopana.cz</code>.</li>
+    <li>Zkontrolovat soulad textu v online propozicich s dokumentem PDF/Word.</li>
+    <li>Po kazde zmene propozic aktualizovat soubory v <code>public/downloads/</code>.</li>
+  </ul>
+
+  <h2>Priorita 3 - technicke doladeni</h2>
+  <ul>
+    <li>Optimalizovat velky obrazek <code>public/images/E-Fyzio.jpg</code>, aktualne ma priblizne 2.6 MB.</li>
+    <li>Rozhodnout, jestli jsou stale potreba vychozi soubory <code>public/file.svg</code>, <code>public/globe.svg</code>, <code>public/next.svg</code>, <code>public/vercel.svg</code> a <code>public/window.svg</code>.</li>
+    <li>Zkontrolovat mobilni zobrazeni hlavni stranky, propozic, registrace a tabulky vitezu.</li>
+    <li>Zkontrolovat pristupnost formularu: viditelne popisky, chybove hlasky, focus stavy a kontrast.</li>
+    <li>Zkontrolovat, jestli emoji ikony v <code>components/ProposalsSection.tsx</code> zustanou, nebo je nahradit ciste textovou/ikonovou variantou.</li>
+    <li>Zvazit jednotnejsi styl tlacitek a odkazu napric hlavni strankou, propozicemi a registraci.</li>
+    <li>Doplnit zakladni ochranu proti opakovanemu spamovani formulare, pokud se ukaze potreba.</li>
+    <li>Zvazit logovani nebo archivaci prijatych prihlasek mimo email, pokud bude potreba evidence tymu.</li>
+  </ul>
+
+  <h2>Priorita 4 - pred verejnym spustenim</h2>
+  <ul>
+    <li>Otestovat web na produkcni URL <code>https://turnaj2026.lukaveckopana.cz</code>.</li>
+    <li>Otestovat vsechny odkazy ke stazeni.</li>
+    <li>Otestovat odkazy zpet na hlavni web a overit, ze vedou na <code>https://www.lukaveckopana.cz</code>.</li>
+    <li>Otestovat registraci na mobilu i desktopu.</li>
+    <li>Zkontrolovat nahled sdileni na Facebooku a dalsich sitich.</li>
+    <li>Zkontrolovat favicon a nahledovy obrazek Open Graph.</li>
+    <li>Po finalni kontrole udelat commit.</li>
+    <li>Nasazeni provest az po odsouhlaseni; pro tento projekt plati <code>git push</code>.</li>
+  </ul>
+
+  <h2>Poznamky k aktualnimu rozpracovanemu stavu</h2>
+  <ul>
+    <li>Necommitnute zmeny jsou v <code>AGENTS.md</code>, <code>app/api/register/route.ts</code>, <code>app/propozice/page.tsx</code>, <code>components/InformationSection.tsx</code>, <code>components/RegistrationForm.tsx</code> a <code>content/tournament.json</code>.</li>
+    <li>Novy necommitnuty soubor je <code>public/downloads/propozice_2026novyhsok.pdf</code>.</li>
+    <li>Necommitnute jsou take <code>.codex/</code> a <code>.npmrc</code>; pred commitem je potreba rozhodnout, zda patri do repozitare.</li>
+    <li><code>npm run build</code> probehl uspesne 24. 5. 2026.</li>
+  </ul>
+</body>
+</html>

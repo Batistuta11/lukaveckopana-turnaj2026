@@ -93,7 +93,7 @@
     "title": "Informace k turnaji",
     "paragraphs": [
       "Klub malé kopané Lukavec připravuje jubilejní 25. ročník tradičního turnaje v malé kopané O pohár obce Lukavec.",
-      "Turnaj je určen pro maximálně 10 mužstev; podrobnosti o systému, startovném, harmonogramu a organizačních pokynech budou doplněny."
+      "Jednodenní turnaj je určen pro 8 až 10 mužstev. Hraje se v počtu 4 + 1, startovné je 1200 Kč a úvodní utkání ve skupinách začínají v 8:30."
     ]
   },
 
@@ -101,24 +101,38 @@
     "forTeams": {
       "title": "Pro mužstva",
       "items": [
-        "Přihláška mužstva – zde",
-        "turnaj je pro maximálně 10 mužstev",
-        "pravidla a systém turnaje budou zveřejněny zde"
+        {
+          "label": "Přihláška mužstva",
+          "href": "/registrace"
+        },
+        {
+          "label": "turnaj je pro 8 až 10 mužstev"
+        },
+        {
+          "label": "hraje se 4 + 1, zápasy mají hrací dobu 2 × 10 minut",
+          "href": "/propozice"
+        }
       ]
     },
     "forVisitors": {
       "title": "Pro návštěvníky",
       "items": [
-        "sportovní program po celý den",
-        "občerstvení v areálu",
-        "příjemná atmosféra v Lukavci"
+        {
+          "label": "sportovní program po celý den"
+        },
+        {
+          "label": "občerstvení v areálu"
+        },
+        {
+          "label": "příjemná atmosféra v Lukavci"
+        }
       ]
     }
   },
 
   "proposals": {
     "title": "Propozice turnaje",
-    "description": "Stáhni si podrobné propozice turnaje s informacemi o pravidlech, startovném a organizačních podmínkách.",
+    "description": "Stáhni si podrobné propozice turnaje s informacemi o pravidlech, startovném a organizačních podmínkách. Pro rychlé čtení je k dispozici PDF, pro úpravy také Word.",
     "sections": [
       {
         "title": "Termín a začátek",
@@ -130,22 +144,27 @@
       },
       {
         "title": "Účastníci",
-        "content": "Turnaj je určen pro maximálně 10 mužstev. V případě většího zájmu bude pořadatel upřednostňovat týmy, které potvrdí účast nejdříve. Každé mužstvo může přihlásit hráče v souladu s pravidly dané soutěže."
+        "content": "Turnaj je určen pro 8 až 10 mužstev. Hraje se v počtu 4 + 1. Soupiska musí obsahovat minimálně 4 hráče a 1 brankáře. Hráč uvedený na soupisce jednoho mužstva nesmí v průběhu turnaje nastoupit za jiné mužstvo."
       },
       {
         "title": "Systém turnaje",
-        "content": "Turnaj bude probíhat formou skupinové fáze následované vyřazovací částí. Podrobné rozpisy skupin, hrací formát a délky zápasů budou zveřejněny před zahájením turnaje."
+        "content": "Mužstva, která obsadí ve skupinách 1. až 4. místo, postupují do čtvrtfinále. Týmy na 5. místě ve skupinách v turnaji končí a o jejich celkovém pořadí rozhodují výsledky ve skupinách. Vítězové čtvrtfinále postupují do semifinále, vítězové semifinále sehrají finále a poražení utkání o 3. místo."
       },
       {
         "title": "Pravidla",
-        "content": "Hraje se podle pravidel malé kopané, která jsou upravena pro potřeby turnaje. Hráči musí dodržovat fair play, bezpečnostní pravidla a pokyny rozhodčích."
+        "content": "Hraje se podle pravidel malé kopané s úpravami pro místní hrací podmínky. Skluzy nejsou povoleny. O pořadí ve skupině rozhoduje počet bodů, vzájemný zápas, rozdíl skóre, větší počet vstřelených branek a případně los."
       },
       {
         "title": "Startovné a registrace",
-        "content": "Startovné je uvedeno v oficiálních propozicích, které jsou k dispozici ke stažení níže. Registrace se řídí pokyny pořadatele a do turnaje jsou zařazena mužstva, která splní přihlášku a zaplatí startovné."
+        "content": "Startovné je 1200 Kč. Platba musí být provedena do 26. 7. 2026 na účet 249540475/0300, variabilní symbol 4946428827. Do zprávy pro příjemce uveďte název týmu. Prezentace všech týmů u pořadatele proběhne nejpozději do 8:00."
       }
     ],
     "files": [
+      {
+        "name": "Propozice 2026",
+        "url": "/downloads/propozice_2026novyhsok.pdf",
+        "type": "PDF"
+      },
       {
         "name": "Propozice 2026",
         "url": "/downloads/propozice_2026novyhsok.doc",
@@ -158,14 +177,14 @@
         "location": "Lukavec u Hořic",
         "mobile": "724 460 412",
         "email": "jan.bartos@cdt.cz",
-        "website": "http://www.lukaveckopana.cz"
+        "website": "https://www.lukaveckopana.cz"
       },
       {
         "name": "Honza Šotola",
         "location": "Lukavec u Hořic",
         "mobile": "608 930 890",
         "email": "honzasotek@seznam.cz",
-        "website": "http://www.lukaveckopana.cz"
+        "website": "https://www.lukaveckopana.cz"
       }
     ],
     "organizersFooter": "Za pořadatele turnaje Lukavec 2026: Honza Bartoš, Honza Šotola, Jarda Janoušek"

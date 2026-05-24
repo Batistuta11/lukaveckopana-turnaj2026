@@ -55,3 +55,11 @@ Tento projekt slouží pouze jako samostatná prezentační stránka pro 25. ro�
 - Soubor app/page.tsx má zůstat krátký a má skládat stránku z komponent.
 - Zachovej hlavní web WordPressu beze změn.
 - Odkazy zpět na hlavní web musí vést na https://www.lukaveckopana.cz.
+## MCP usage rules
+
+- When working with Next.js, React, Tailwind CSS, Vercel, OpenAI, or Codex configuration, use available MCP documentation before making assumptions.
+- If unsure about a framework API, CLI command, configuration key, or deployment behavior, check MCP documentation first.
+- Do not invent commands, options, or configuration keys.
+- Before editing files, inspect the existing project files.
+- After editing code, run `npm run build`.
+- Do not commit or push changes unless explicitly instructed.

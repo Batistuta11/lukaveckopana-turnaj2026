@@ -1,39 +1,33 @@
 import Link from "next/link";
 
+interface InformationItem {
+  label: string;
+  href?: string;
+}
+
 export interface InformationSectionProps {
   title: string;
   paragraphs: string[];
   forTeams: {
     title: string;
-    items: string[];
+    items: InformationItem[];
   };
   forVisitors: {
     title: string;
-    items: string[];
+    items: InformationItem[];
   };
 }
 
-function renderItem(item: string) {
-  if (!item.includes("zde")) {
-    return item;
+function renderItem(item: InformationItem) {
+  if (!item.href) {
+    return item.label;
   }
 
-  // Určit URL odkazu na základě obsahu
-  const isRegistration = item.includes("Přihláška");
-  const href = isRegistration ? "/registrace" : "/propozice";
-
-  const parts = item.split("zde");
-
-  return parts.map((part, index) => (
-    <span key={index}>
-      {part}
-      {index < parts.length - 1 && (
-        <Link href={href} className="text-blue-600 underline hover:text-blue-700">
-          zde
-        </Link>
-      )}
-    </span>
-  ));
+  return (
+    <Link href={item.href} className="text-blue-600 underline hover:text-blue-700">
+      {item.label}
+    </Link>
+  );
 }
 
 export default function InformationSection({
@@ -57,9 +51,9 @@ export default function InformationSection({
           <h3 className="text-xl font-black text-slate-950">
             {forTeams.title}
           </h3>
-          <ul className="mt-4 space-y-2 text-slate-700">
-            {forTeams.items.map((item, index) => (
-              <li key={index}>• {renderItem(item)}</li>
+          <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-700">
+            {forTeams.items.map((item) => (
+              <li key={item.label}>{renderItem(item)}</li>
             ))}
           </ul>
         </div>
@@ -68,9 +62,9 @@ export default function InformationSection({
           <h3 className="text-xl font-black text-slate-950">
             {forVisitors.title}
           </h3>
-          <ul className="mt-4 space-y-2 text-slate-700">
-            {forVisitors.items.map((item, index) => (
-              <li key={index}>• {item}</li>
+          <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-700">
+            {forVisitors.items.map((item) => (
+              <li key={item.label}>{renderItem(item)}</li>
             ))}
           </ul>
         </div>

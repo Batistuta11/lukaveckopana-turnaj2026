@@ -24,12 +24,12 @@ export default function RegistrationPage() {
       <section className="mx-auto max-w-5xl px-5 py-8">
         <BackButton href="/" label="← Zpět na hlavní stránku" />
 
-        <div className="overflow-hidden rounded-[2rem] bg-white p-8 shadow-xl">
+        <div className="overflow-hidden rounded-[2rem] bg-white p-5 shadow-xl md:p-8">
           <p className="mb-3 text-sm font-black uppercase tracking-[0.3em] text-blue-300">
             Přihláška na turnaj
           </p>
 
-          <h1 className="text-4xl font-black leading-tight text-slate-950 md:text-5xl">
+          <h1 className="text-3xl font-black leading-tight text-slate-950 md:text-5xl">
             Přihláška mužstva na {tournamentData.title}
           </h1>
 

@@ -8,6 +8,7 @@ export default function RegistrationForm() {
     captainName: "",
     email: "",
     phone: "",
+    website: "",
   });
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
@@ -43,12 +44,13 @@ export default function RegistrationForm() {
         return;
       }
 
-      setMessage("✅ Přihláška byla úspěšně odeslána! Děkujeme.");
+      setMessage("Přihláška byla úspěšně odeslána. Děkujeme.");
       setFormData({
         teamName: "",
         captainName: "",
         email: "",
         phone: "",
+        website: "",
       });
     } catch {
       setError("Chyba při odesílání. Zkus to později.");
@@ -66,82 +68,107 @@ export default function RegistrationForm() {
 
       <form onSubmit={handleSubmit} className="mt-6 space-y-4">
         <div>
-          <label className="block text-sm font-black text-slate-700">
+          <label htmlFor="teamName" className="block text-sm font-black text-slate-700">
             Název mužstva *
           </label>
           <input
+            id="teamName"
             type="text"
             name="teamName"
             value={formData.teamName}
             onChange={handleChange}
             required
-            className="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2 text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none"
+            maxLength={80}
+            autoComplete="organization"
+            className="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2 text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
             placeholder="Zadej název mužstva"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-black text-slate-700">
+          <label htmlFor="captainName" className="block text-sm font-black text-slate-700">
             Kapitán (jméno a příjmení) *
           </label>
           <input
+            id="captainName"
             type="text"
             name="captainName"
             value={formData.captainName}
             onChange={handleChange}
             required
-            className="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2 text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none"
+            maxLength={80}
+            autoComplete="name"
+            className="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2 text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
             placeholder="Zadej jméno a příjmení"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-black text-slate-700">
+          <label htmlFor="email" className="block text-sm font-black text-slate-700">
             Email *
           </label>
           <input
+            id="email"
             type="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
             required
-            className="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2 text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none"
+            maxLength={120}
+            autoComplete="email"
+            className="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2 text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
             placeholder="Zadej email"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-black text-slate-700">
+          <label htmlFor="phone" className="block text-sm font-black text-slate-700">
             Mobilní telefon *
           </label>
           <input
+            id="phone"
             type="tel"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
             required
-            className="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2 text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none"
+            maxLength={20}
+            autoComplete="tel"
+            className="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2 text-slate-900 placeholder-slate-400 focus:border-blue-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
             placeholder="Zadej telefon"
+          />
+        </div>
+
+        <div className="hidden" aria-hidden="true">
+          <label htmlFor="website">Web</label>
+          <input
+            id="website"
+            type="text"
+            name="website"
+            value={formData.website}
+            onChange={handleChange}
+            tabIndex={-1}
+            autoComplete="off"
           />
         </div>
 
         <button
           type="submit"
           disabled={loading}
-          className="mt-6 w-full rounded-full bg-blue-700 px-6 py-3 text-sm font-black text-white hover:bg-blue-800 disabled:bg-slate-400"
+          className="mt-6 w-full rounded-full bg-blue-700 px-6 py-3 text-sm font-black text-white hover:bg-blue-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:bg-slate-400"
         >
           {loading ? "Odesílání..." : "Odeslat přihlášku"}
         </button>
       </form>
 
       {message && (
-        <div className="mt-4 rounded-lg bg-green-50 p-4 text-green-700">
+        <div role="status" className="mt-4 rounded-lg bg-green-50 p-4 text-green-700">
           {message}
         </div>
       )}
 
       {error && (
-        <div className="mt-4 rounded-lg bg-red-50 p-4 text-red-700">
+        <div role="alert" className="mt-4 rounded-lg bg-red-50 p-4 text-red-700">
           {error}
         </div>
       )}

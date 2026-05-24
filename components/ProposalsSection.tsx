@@ -10,6 +10,10 @@ export interface ProposalsSectionProps {
   files: ProposalFile[];
 }
 
+function getFileBadge(type: string) {
+  return type === "Word" ? "DOC" : "PDF";
+}
+
 export default function ProposalsSection({
   title,
   description,
@@ -30,9 +34,8 @@ export default function ProposalsSection({
             className="flex items-center gap-3 rounded-2xl bg-white p-4 shadow-sm transition hover:bg-slate-50 hover:shadow-md"
           >
             <div className="flex-shrink-0">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-blue-700 font-black text-sm">
-                {file.type === "Word" && "📄"}
-                {file.type === "PDF" && "📕"}
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-sm font-black text-blue-700">
+                {getFileBadge(file.type)}
               </div>
             </div>
             <div className="flex-1">

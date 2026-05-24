@@ -32,7 +32,7 @@ export default function VitezovePage() {
             <p className="text-sm font-black uppercase tracking-[0.3em] text-blue-300">
               Historie turnaje
             </p>
-            <h1 className="mt-4 text-4xl font-black leading-tight md:text-5xl">
+            <h1 className="mt-4 text-3xl font-black leading-tight md:text-5xl">
               {tournamentData.winners.title}
             </h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-300">
@@ -41,8 +41,8 @@ export default function VitezovePage() {
           </div>
 
           <div className="p-4 md:p-8">
-            <div className="overflow-hidden rounded-3xl border border-slate-200">
-              <table className="w-full border-collapse text-left">
+            <div className="overflow-x-auto rounded-3xl border border-slate-200">
+              <table className="w-full min-w-[34rem] border-collapse text-left">
                 <thead className="bg-slate-100 text-sm uppercase tracking-wide text-slate-600">
                   <tr>
                     <th className="px-4 py-3 font-black">Ročník</th>

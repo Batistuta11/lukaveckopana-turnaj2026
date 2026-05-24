@@ -23,12 +23,12 @@ export default function PropozicePage() {
       <section className="mx-auto max-w-5xl px-5 py-8">
         <BackButton href="/" label="← Zpět na hlavní stránku" />
 
-        <div className="overflow-hidden rounded-[2rem] bg-white p-8 shadow-xl">
+        <div className="overflow-hidden rounded-[2rem] bg-white p-5 shadow-xl md:p-8">
           <p className="mb-3 text-sm font-black uppercase tracking-[0.3em] text-blue-300">
             Propozice turnaje
           </p>
 
-          <h1 className="text-4xl font-black leading-tight text-slate-950 md:text-5xl">
+          <h1 className="text-3xl font-black leading-tight text-slate-950 md:text-5xl">
             {tournamentData.hero.title}
           </h1>
 
@@ -48,17 +48,23 @@ export default function PropozicePage() {
             <div className="rounded-3xl bg-slate-50 p-6">
               <h2 className="text-2xl font-black text-slate-950">Stáhnout propozice</h2>
               <p className="mt-2 text-slate-700">
-                Dokument propozic je k dispozici ke stažení ve formátu Word. Pokud potřebuješ
-                mít propozice v offline režimu, použij níže uvedený odkaz.
+                Dokument propozic je k dispozici ke stažení ve formátu PDF i
+                Word. Pokud potřebuješ mít propozice v offline režimu, použij
+                níže uvedené odkazy.
               </p>
 
-              <a
-                href={tournamentData.proposals.files[0].url}
-                download
-                className="mt-6 inline-flex rounded-full bg-blue-700 px-6 py-3 text-sm font-black text-white hover:bg-blue-800"
-              >
-                Stáhnout propozice
-              </a>
+              <div className="mt-6 flex flex-wrap gap-3">
+                {tournamentData.proposals.files.map((file) => (
+                  <a
+                    key={file.url}
+                    href={file.url}
+                    download
+                    className="inline-flex rounded-full bg-blue-700 px-6 py-3 text-sm font-black text-white hover:bg-blue-800"
+                  >
+                    Stáhnout {file.type}
+                  </a>
+                ))}
+              </div>
             </div>
 
             <div className="rounded-3xl bg-slate-50 p-6">
