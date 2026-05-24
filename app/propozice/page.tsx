@@ -17,6 +17,20 @@ export const metadata: Metadata = {
   },
 };
 
+const payment = tournamentData.proposals.payment;
+const paymentQrPayload = [
+  "SPD",
+  "1.0",
+  `ACC:${payment.iban}`,
+  `AM:${payment.amount}`,
+  `CC:${payment.currency}`,
+  `X-VS:${payment.variableSymbol}`,
+  `MSG:${payment.message}`,
+].join("*");
+const paymentQrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${encodeURIComponent(
+  paymentQrPayload
+)}`;
+
 export default function PropozicePage() {
   return (
     <main className="min-h-screen bg-slate-100 text-slate-900">
@@ -42,6 +56,43 @@ export default function PropozicePage() {
               <div key={section.title} className="rounded-3xl bg-slate-50 p-6">
                 <h2 className="text-2xl font-black text-slate-950">{section.title}</h2>
                 <p className="mt-2 leading-8 text-slate-700">{section.content}</p>
+                {section.title === "Startovné a registrace" && (
+                  <div className="mt-6 grid gap-5 rounded-3xl bg-white p-5 shadow-sm md:grid-cols-[auto_1fr] md:items-center">
+                    <img
+                      src={paymentQrUrl}
+                      alt="QR kód pro platbu startovného"
+                      width={240}
+                      height={240}
+                      className="mx-auto h-48 w-48 rounded-2xl border border-slate-200 bg-white p-2 md:mx-0"
+                    />
+                    <div>
+                      <h3 className="text-xl font-black text-slate-950">
+                        {payment.title}
+                      </h3>
+                      <dl className="mt-3 grid gap-2 text-sm text-slate-700 sm:grid-cols-2">
+                        <div>
+                          <dt className="font-black text-slate-950">Částka</dt>
+                          <dd>1200 Kč</dd>
+                        </div>
+                        <div>
+                          <dt className="font-black text-slate-950">Účet</dt>
+                          <dd>{payment.account}</dd>
+                        </div>
+                        <div>
+                          <dt className="font-black text-slate-950">Variabilní symbol</dt>
+                          <dd>{payment.variableSymbol}</dd>
+                        </div>
+                        <div>
+                          <dt className="font-black text-slate-950">Poznámka</dt>
+                          <dd>Název týmu</dd>
+                        </div>
+                      </dl>
+                      <p className="mt-4 rounded-2xl bg-yellow-50 p-4 text-sm font-bold leading-6 text-yellow-900">
+                        {payment.note}
+                      </p>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
 

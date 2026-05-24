@@ -109,7 +109,7 @@
           "label": "turnaj je pro 8 až 10 mužstev"
         },
         {
-          "label": "hraje se 4 + 1, zápasy mají hrací dobu 2 × 10 minut",
+          "label": "Informace a propozice turnaje",
           "href": "/propozice"
         }
       ]
@@ -133,6 +133,16 @@
   "proposals": {
     "title": "Propozice turnaje",
     "description": "Stáhni si podrobné propozice turnaje s informacemi o pravidlech, startovném a organizačních podmínkách. Pro rychlé čtení je k dispozici PDF, pro úpravy také Word.",
+    "payment": {
+      "title": "QR platba startovného",
+      "account": "249540475/0300",
+      "iban": "CZ2803000000000249540475",
+      "amount": "1200.00",
+      "currency": "CZK",
+      "variableSymbol": "4946428827",
+      "message": "Nazev tymu",
+      "note": "QR kód má předvyplněnou poznámku „Nazev tymu“. Před odesláním platby ji v bankovnictví nahraď skutečným názvem týmu."
+    },
     "sections": [
       {
         "title": "Termín a začátek",
