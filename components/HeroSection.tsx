@@ -48,8 +48,8 @@ export default function HeroSection({
           <Image
             src={gifPath}
             alt="Turnaj GIF"
-            width={1200}
-            height={400}
+            width={466}
+            height={61}
             priority
             unoptimized
             className="mb-6 w-full rounded-lg"
